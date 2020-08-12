@@ -1,0 +1,10 @@
+version: "3"
+  db:
+    image: postgres:12.3
+    volume:
+      - postgres-data:/var/data/lib/postgres/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: asc
+      POSTGRES_HOST_AUTH_METHOD: trust
